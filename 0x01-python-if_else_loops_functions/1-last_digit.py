@@ -9,9 +9,9 @@ if number < 0:
 else:
     lastdigit = number % 10
 if lastdigit < 5:
-    print(f"Last digit of {number} is {str3}")
+    print(f"Last digit of {number} is {lastdigit} {str3}")
 elif lastdigit > 5:
-    print(f"Last digit of {number} is {str2}")
+    print(f"Last digit of {number} is {lastdigit} {str2}")
 elif lastdigit == 0:
     print(f"Last digit of {number} is {lastdigit} {str3}")
 
