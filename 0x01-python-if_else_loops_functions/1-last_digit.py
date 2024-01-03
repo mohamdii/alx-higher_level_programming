@@ -8,6 +8,7 @@ if number < 0:
     lastdigit = number % -10
 else:
     lastdigit = number % 10
+
 if lastdigit < 5:
     print("Last digit of {} is {} ".format(number, lastdigit) + str3) 
 elif lastdigit == 0:
