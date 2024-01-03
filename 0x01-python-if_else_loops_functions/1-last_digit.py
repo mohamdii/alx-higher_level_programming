@@ -10,8 +10,7 @@ else:
     lastdigit = number % 10
 if lastdigit < 5:
     print("Last digit of {} is {} ".format(number, lastdigit) + str3) 
-elif lastdigit > 5:
-    print("Last digit of {} is {} ".format(number, lastdigit) + str1)
 elif lastdigit == 0:
     print("Last digit of {} is {} ".format(number, lastdigit) + str2)
-
+else:
+    print("Last digit of {} is {} ".format(number, lastdigit) + str1)
