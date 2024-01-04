@@ -8,7 +8,7 @@ for i in range(1, 101):
         continue
     elif i % 5 == 0:
         if i == 100:
-            print("Buzz")
+            print("Buzz ")
         print("Buzz", end=" ")
         continue
-    print(f"{i}", end=" ")    
+    print(f"{i}", end=" ")
