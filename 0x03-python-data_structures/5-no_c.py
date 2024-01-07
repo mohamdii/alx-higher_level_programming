@@ -7,4 +7,3 @@ def no_c(my_string):
         else:
             new_string+=i
     return new_string
-         
