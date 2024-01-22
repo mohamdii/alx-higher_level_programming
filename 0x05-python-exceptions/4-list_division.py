@@ -3,6 +3,8 @@
 def list_division(my_list_1, my_list_2, list_length):
     index = 0
     nlist = []
+    if list_length < 0:
+        return nlist
     while True:
         try:
             if index < list_length:
