@@ -8,11 +8,12 @@ class Square:
         """initialize a new square.
         Args:
             size (int): size of square.
-        """
-        self.size = size
-    def sizevalue(self):
-        if self.size < 0:
+        """     
+        if isinstance(size, int) != True: 
+            raise TypeError("size must be an integer")
+        if size < 0:
             raise ValueError("size must be >= 0")
-    def sizetype(self):
-        if self.size.isdigit() != True:
-            raise TypeError
+            
+
+        self.__size = size
+        
