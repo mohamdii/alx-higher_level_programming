@@ -1,4 +1,4 @@
-#usr/bin/python3
+#!usr/bin/python3
 """Define a class Square."""
 
 
@@ -12,8 +12,8 @@ class Square:
         Args:
             size (int): size of square.
         """
-
-        if isinstance(size, int) != True: 
+        """if not cond: dont pass"""
+        if isinstance(size, int) != True:
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
