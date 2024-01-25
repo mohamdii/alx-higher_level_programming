@@ -3,8 +3,12 @@
 
 
 class Square:
-    """instance and sizes """
+    """instance and sizes square"""
     def __init__(self, size=0):
+        """initialize a new square.
+        Args:
+            size (int): size of square.
+        """
         self.size = size
     def sizevalue(self):
         if self.size < 0:
