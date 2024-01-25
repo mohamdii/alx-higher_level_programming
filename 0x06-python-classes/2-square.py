@@ -3,7 +3,7 @@
 
 
 class Square:
-    
+    """instance and sizes """
     def __init__(self, size=0):
         self.size = size
     def sizevalue(self):
