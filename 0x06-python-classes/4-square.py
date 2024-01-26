@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ class square """
+
+
 class Square:
     """ initialize fields """
     def __init__(self, size=0):
@@ -17,5 +19,6 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = l
+
     def area(self):
         return self.size ** 2
