@@ -40,18 +40,16 @@ class Square:
         if self.__size == 0:
             print()
             return
+        if self.__position[1] > 0:
+            for breaks in range(self.__position[1]):
+                print()
         for row in range(self.__size):
             for space in range(self.__position[0]):
                 print(" ", end="")
             for column in range(self.__size):
                 print("#", end="")
             print()
-        if self.__position[1] > 0:
-            for breaks in range(self.__position[1]):
-                print()
-        else:
-            print()
-
+        
 
 
 
