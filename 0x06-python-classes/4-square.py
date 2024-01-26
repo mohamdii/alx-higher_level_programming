@@ -1,12 +1,14 @@
 #!/usr/bin/python3
-
+""" class square """
 class Square:
+    """ initialize fields """
     def __init__(self, size=0):
         self.size = size
-
+    """ getter """
     @property
     def size(self):
         return self.__size
+    """setter"""
     @size.setter
     def size(self, l):
         if not isinstance(l, int):
