@@ -60,6 +60,6 @@ class Rectangle:
         rec = "Rectangle(" + str(self.__width)
         rec += ", " + str(self.__height) + ")"
         return rec
-    
+
     def __del__(self):
         print("Bye rectangle...")
