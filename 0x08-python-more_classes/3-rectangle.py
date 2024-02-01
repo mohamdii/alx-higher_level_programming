@@ -52,5 +52,6 @@ class Rectangle:
         for col in range(self.__height):
             for row in range(self.__width):
                 rec += "#"
-            rec += '\n'
+            if self.__height - 1 != col:
+                rec += '\n'
         return rec
