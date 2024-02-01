@@ -53,4 +53,9 @@ class Rectangle:
             for row in range(self.__width):
                 rec += "#"
             rec += '\n'
+    
+    def __repr__(self):
+        """ return rect rep"""
+        rec = "Rectangle(" + str(self.__width)
+        rect += ", " + str(self.__height) + ")"
         return rec
