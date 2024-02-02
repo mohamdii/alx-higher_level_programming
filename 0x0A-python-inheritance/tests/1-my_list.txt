@@ -1,0 +1,24 @@
+Checking that MyList inherits from list:
+	>>> issubclass(Mylist, list)
+	True
+
+Checking for empty list:
+	>>> l = mylist()
+	>>> l.print_sorted()
+	[]
+Checking for append list:
+	>>> l.append(1)
+	>>> l.append(2)
+	>>> l.append(3)
+	>>> l.append(4)
+	>>> l.append(5)
+	>>> l.print_sorted()
+	[1, 2, 3, 4, 5]
+Checking if l was reversed:
+	>>> l.append(3)
+	>>> l.append(2)
+	>>> l.append(1)
+	>>> print(l)
+	[3, 2, 1]
+	>>> l.print_sorted()
+	[1, 2, 3]
