@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Geometry Class"""
 
+
 class BaseGeometry:
     """Class that has only one public method"""
 

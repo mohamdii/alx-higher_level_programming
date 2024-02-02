@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """function that compares if directly or inderectly inheriting from class"""
 
+
 def inherits_from(obj, a_class):
     """
     Check if the obj is directly or indirectly inheriting from class
