@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """is_kind_of_class that checks the kind"""
 
+
 def is_kind_of_class(obj, a_class):
     """
     Compares between obj and class
