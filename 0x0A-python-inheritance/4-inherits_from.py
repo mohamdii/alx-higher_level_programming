@@ -11,6 +11,6 @@ def inherits_from(obj, a_class):
         if obj is compared return True
         otherwise - False
     """
-    if (isinstance(bj, a_class)):
+    if (isinstance(obj, a_class)):
         return True
     return False
