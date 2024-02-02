@@ -22,3 +22,15 @@ Checking if l was reversed:
 	[3, 2, 1]
 	>>> l.print_sorted()
 	[1, 2, 3]
+Check if all in i list are negative values:
+	>>> l.append(-1)
+	>>> l.append(-2)
+	>>> l.append(-3)
+	>>> l.print_sorted()
+	[-3, -2, -1]
+Checking if one only was negative value:
+	>>> l.append(2)
+	>>> l.append(-1)
+	>>> l.append(1)
+	>>> l.print_sorted()
+	[-1, 1, 2]
