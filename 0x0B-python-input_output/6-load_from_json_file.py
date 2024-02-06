@@ -3,7 +3,7 @@
 import json
 
 
-def load_from_json_file(filename):
+def load_from_json_file(filename, mode="r", encoding="utf-8"):
     """function return an object"""
     with open(filename) as file:
-        json.load(file)
+        return json.loads(file.read())
