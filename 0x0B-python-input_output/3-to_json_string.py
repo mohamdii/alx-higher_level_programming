@@ -1,6 +1,7 @@
 #!/usr/bin/python3
+
+"""fucntion that return json rep"""
 import json
-"""function that json string"""
 
 
 def to_json_string(my_obj):
