@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-
+"""function that writes json to text file"""
 import json
-""" saving to json file"""
 
 
 def save_to_json_file(my_obj, filename):
