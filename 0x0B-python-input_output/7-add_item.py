@@ -9,7 +9,7 @@ if __name__ == "__main__":
 
     lis = []
     filename = "add_item.json"
-    save_to_json_file(lis, filename)
     for i in sys.argv[1:]:
         lis.append(i)
+    save_to_json_file(lis, filename)
     load_from_json_file(filename)
