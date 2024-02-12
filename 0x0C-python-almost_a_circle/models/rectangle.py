@@ -37,12 +37,13 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("x must be >= 0")
         self.__x = value
-    
+
     @y.setter
     def y(self, value):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+
     @staticmethod
     def validate_setter(name, value):
         if type(value) != int:
@@ -50,3 +51,35 @@ class Rectangle(Base):
         elif value < 0:
             raise ValueError("{} must be > 0".format(name))
         return value
+
+    def area(self):
+        return self.__height * self.__width
+
+    def display(self):
+        for i in range(self.__y):
+            print()
+        for rows in range(self.__height):
+            for i in range(self.__x):
+                print(end=" ")
+            for col in range(self.__width):
+                print("#", end="")
+            print()
+
+    def __str__(self):
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
+
+    def update(self, *args, **kwargs):
+        try:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+            self.__x = args[3]
+            self.__y = args[4]
+            exit
+        except IndexError:
+            pass
+        for key, value in kwargs.items():
+            setattr(self, key, value)
+
+    def to_dictionary(self):
+        return self.__dict__
