@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """ Rectangle from base"""
+
 from models.base import Base
 
 
