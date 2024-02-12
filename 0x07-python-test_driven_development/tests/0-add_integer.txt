@@ -1,8 +1,13 @@
 This test is created to train on how to use doctests
 
-	>>> add_integer(1, 2)
+
+
+	>>> print(add_integer(1, 2))
 	3
-	>>> add_integer(100, -2)
+
+
+
+	>>> print(add_integer(100, -2))
 	98
 
 ::
