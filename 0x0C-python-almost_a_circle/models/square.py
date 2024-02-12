@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Define Rectangle Class"""
+"""Define Square Class"""
 from models.rectangle import Rectangle
 
 
