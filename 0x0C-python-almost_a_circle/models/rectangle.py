@@ -1,64 +1,95 @@
 #!/usr/bin/python3
-"""Define Rectangle Class
-"""
+'''
+    Class Rectangle
+'''
+from models.base import Base
 
-from models.rectangle import Rectangle
 
+class Rectangle(Base):
+    """rectangle methods inherits from base """""
 
-class Square(Rectangle):
-    """Module Representation of Square
-"""
-
-    def __init__(self, size, x=0, y=0, id=None):
-        """Initialization a Square
-        """
-        super().__init__(size, size, x, y, id)
+    def __init__(self, width, height, x=0, y=0, id=None):
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
+        super().__init__(id)
 
     @property
-    def size(self):
-        """module Square size getter
-        """
-        return self.width
+    def width(self):
+        return self.__width
 
-    @size.setter
-    def size(self, value):
-        """module Square size setter
-        """
-        self.width = value
-        self.height = value
+    @property
+    def height(self):
+        return self.__height
+
+    @property
+    def x(self):
+        return self.__x
+
+    @property
+    def y(self):
+        return self.__y
+
+    @width.setter
+    def width(self, value):
+        validated = self.validate_setter("width", value)
+        self.__width = validated
+
+    @height.setter
+    def height(self, value):
+        validated = self.validate_setter("height", value)
+        self.__height = validated
+
+    @x.setter
+    def x(self, value):
+        if value < 0:
+            raise ValueError("x must be >= 0")
+        self.__x = value
+
+    @y.setter
+    def y(self, value):
+        if value < 0:
+            raise ValueError("y must be >= 0")
+        self.__y = value
+
+    @staticmethod
+    def validate_setter(name, value):
+        if type(value) != int:
+            raise TypeError("{} must be an integer".format(name))
+        elif value < 0:
+            raise ValueError("{} must be > 0".format(name))
+        return value
+
+    def area(self):
+        return self.__height * self.__width
+
+    def display(self):
+        for i in range(self.__y):
+            print()
+        for rows in range(self.__height):
+            for i in range(self.__x):
+                print(end=" ")
+            for col in range(self.__width):
+                print("#", end="")
+            print()
 
     def __str__(self):
-        """module string represation of square
-        """
-        return "[Square] ({:d}) {:d}/{:d} - {:d}".format(self.id,
-                                                         self.x,
-                                                         self.y,
-                                                         self.width)
+        return "[Rectangle] ({}) {}/{} - {}/{}".
+    format(self.id, self.__x, self.__y, self.__width, self.__height)
 
     def update(self, *args, **kwargs):
-        """module update square
-        """
-        if len(args):
-            for i, arg in enumerate(args):
-                if i == 0:
-                    self.id = arg
-                elif i == 1:
-                    self.size = arg
-                elif i == 2:
-                    self.x = arg
-                elif i == 3:
-                    self.y = arg
-        else:
-            for key, value in kwargs.items():
-                if hasattr(self, key) is True:
-                    setattr(self, key, value)
+        try:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+            self.__x = args[3]
+            self.__y = args[4]
+            exit
+        except IndexError:
+            pass
+        for key, value in kwargs.items():
+            setattr(self, key, value)
 
     def to_dictionary(self):
-        """retrun dictonary
-        """
-        return {
-            "id": self.id,
-            "size": self.size,
-            "x": self.x,
-            "y": self.y
-        }
+        return self.__dict__
