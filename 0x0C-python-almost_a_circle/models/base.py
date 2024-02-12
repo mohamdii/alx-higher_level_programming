@@ -1,7 +1,11 @@
 #!/usr/bin/python3
 import json
 import csv
+""" Base class """
+
+
 class Base:
+    """has nb objects read as follows"""
     __nb_objects = 0
     def __init__(self, id=None):
         if id != None:
