@@ -23,7 +23,7 @@ class Rectangle(Base):
     @property
     def x(self):
         return self.__x
-    
+
     @property
     def y(self):
         return self.__y
@@ -72,8 +72,8 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, \
-                self.__x, self.__y, self.__width, self.__height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,\
+                self.__y, self.__width, self.__height)
 
     def update(self, *args, **kwargs):
         try:
