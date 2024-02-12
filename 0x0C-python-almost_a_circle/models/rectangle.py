@@ -4,11 +4,7 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    '''
-        rectangle methods and const.
-        Inherist from:
-            Base
-    '''
+    """rectangle methods inherits from base """""
 
     def __init__(self, width, height, x=0, y=0, id=None): 
         self.width = width
@@ -77,7 +73,8 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, 
+                self.__x, self.__y, self.__width, self.__height)
 
     def update(self, *args, **kwargs):
         try:

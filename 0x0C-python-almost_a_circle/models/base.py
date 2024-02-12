@@ -27,10 +27,11 @@ class Base:
 
         filename = cls.__name__ + ".json"
         new_dict = []
-        for i in list_objs:
-            i = i.to_dictionary()
-            json_dict = json.loads(cls.to_json_string(i))
-            new_dict.append(json_dict)
+        if list_objs is not None:
+            for i in list_objs:
+                i = i.to_dictionary()
+                json_dict = json.loads(cls.to_json_string(i))
+                new_dict.append(json_dict)
 
         with open(filename, mode="w") as file:
             json.dump(new_dict, file)
