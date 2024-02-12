@@ -1,0 +1,38 @@
+This test is created to train on how to use doctests
+
+	>>> add_integer(1, 2)
+	3
+	>>> add_integer(100, -2)
+	98
+
+::
+
+	Second option is 98 by default
+	>>> add_integer(2)
+	100
+
+	>>> add_integer("hi", 4)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+::
+
+	>>> add_integer(4, "hi")
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+what if both are strings or non ints
+
+::
+
+	>>> add_integer("hi", "hi")
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+it will continuously fail
+
+::
+
+	>>add_integer(2, float('nan'))
+	>>Traceback (most recent call last):
+	ValueError: cannot convert float NaN to integer
