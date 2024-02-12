@@ -1,7 +1,7 @@
 #!/usr/bin/python3
+"""base class """
 import json
 import csv
-""" Base class """
 
 
 class Base:
