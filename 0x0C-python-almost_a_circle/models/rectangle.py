@@ -52,3 +52,10 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+
+    @staticmethod
+    def validate_setter(name, val):
+        if type(val) != int:
+            raise TypeError("{} must be an integer".format(name))
+        elif val < 0:
+            raise ValueError("{} must be > 0".format(name))
