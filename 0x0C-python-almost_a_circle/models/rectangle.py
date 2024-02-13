@@ -43,19 +43,19 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        if value < 0:
-            raise ValueError("x must be >= 0")
+        value = self.validate_setter("x", value)
         self.__x = value
 
     @y.setter
     def y(self, value):
-        if value < 0:
-            raise ValueError("y must be >= 0")
+        value = self.validate_setter("y", value)
         self.__y = value
-
     @staticmethod
     def validate_setter(name, val):
         if type(val) != int:
             raise TypeError("{} must be an integer".format(name))
-        elif val < 0:
+        if name == "x" or name == "y":
+            if val < 0:
+                raise ValueError("{} must be >= 0".format(name))
+        elif val <= 0:
             raise ValueError("{} must be > 0".format(name))
