@@ -8,6 +8,7 @@ class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         """Initialiize a Square
         """
+        self.__size = size
         super().__init__(size, size, x, y, id)
 
     @property
@@ -21,6 +22,8 @@ class Square(Rectangle):
         self.__height = self.validate_setter("height", value)
 
     def update(self, *args, **kwargs):
+        '''update function
+        '''
         try:
             self.id = args[0]
             self.__size = args[1]
@@ -32,8 +35,11 @@ class Square(Rectangle):
             setattr(self, key, value)
 
     def to_dictionary(self):
+        '''returns a dict
+        '''
         return self.__dict__
 
     def __str__(self):
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x,
-                                                 self.y, self.__size)
+        ''' self str
+        '''
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.__size)

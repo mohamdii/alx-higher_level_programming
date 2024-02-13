@@ -60,7 +60,7 @@ class Rectangle(Base):
                 raise ValueError("{} must be >= 0".format(name))
         elif val <= 0:
             raise ValueError("{} must be > 0".format(name))
- 
+
     def area(self):
         '''
             Returns the area of rec
