@@ -96,6 +96,3 @@ class Rectangle(Base):
             pass
         for key, value in kwargs.items():
             setattr(self, key, value)
-
-    def to_dictionary(self):
-        Rectangle.__dict__
