@@ -4,6 +4,7 @@
 '''
 from models.base import Base
 
+
 class Rectangle(Base):
     """rectangle methods inherits from base """""
 
