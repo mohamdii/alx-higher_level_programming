@@ -30,20 +30,6 @@ class Square(Rectangle):
         self.validate_setter("height", value)
         self.height = value
 
-    def update(self, *args, **kwargs):
-        '''update function
-        '''
-        try:
-            self.id = args[0]
-            self.__width = args[1]
-            self.__x = args[2]
-            self.__y = args[3]
-        except IndexError:
-            pass
-        for key, value in kwargs.items():
-            if hasattr(self, key) is True:
-                setattr(self, key, value)
-
     def __str__(self):
         '''str
         '''
