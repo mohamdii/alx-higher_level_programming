@@ -38,10 +38,5 @@ class Square(Rectangle):
             if hasattr(self, key) is True:
                 setattr(self, key, value)
 
-    def to_dictionary(self):
-        '''returns a dict
-        '''
-        return self.__dict__
-
     def __str__(self):
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.__size)
