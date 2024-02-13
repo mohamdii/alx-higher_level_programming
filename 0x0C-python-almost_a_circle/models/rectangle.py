@@ -51,9 +51,6 @@ class Rectangle(Base):
         self.validate_setter("y", value)
         self.__y = value
 
-    def area(self):
-        return (self.__width * self.__height)
-
     @staticmethod
     def validate_setter(name, val):
         if type(val) != int:
