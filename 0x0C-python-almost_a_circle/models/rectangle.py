@@ -33,22 +33,22 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        validated = self.validate_setter("width", value)
-        self.__width = validated
+        self.validate_setter("width", value)
+        self.__width = value
 
     @height.setter
     def height(self, value):
-        validated = self.validate_setter("height", value)
-        self.__height = validated
+        self.validate_setter("height", value)
+        self.__height = value
 
     @x.setter
     def x(self, value):
-        value = self.validate_setter("x", value)
+        self.validate_setter("x", value)
         self.__x = value
 
     @y.setter
     def y(self, value):
-        value = self.validate_setter("y", value)
+        self.validate_setter("y", value)
         self.__y = value
 
     @staticmethod
@@ -60,3 +60,5 @@ class Rectangle(Base):
                 raise ValueError("{} must be >= 0".format(name))
         elif val <= 0:
             raise ValueError("{} must be > 0".format(name))
+    def area(self):
+        return self.width * self.height
