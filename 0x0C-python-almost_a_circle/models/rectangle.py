@@ -83,7 +83,7 @@ class Rectangle(Base):
         '''
         return "({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         '''update
         '''
         try:
@@ -94,3 +94,5 @@ class Rectangle(Base):
             self.__y = args[4]
         except IndexError:
             pass
+        for key, value in kwargs.items():
+            setattr(self, key, value)
