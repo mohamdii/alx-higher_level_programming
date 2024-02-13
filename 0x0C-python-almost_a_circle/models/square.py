@@ -1,10 +1,14 @@
 #!/usr/bin/python3
-"""Defines a square class"""
+"""Defines a square class
+"""
+
+
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """This is a square."""
+    """This is a square
+"""
 
     def __init__(self, size, x=0, y=0, id=None):
         """Initialiize a Square
@@ -43,6 +47,6 @@ class Square(Rectangle):
                 setattr(self, key, value)
 
     def __str__(self):
-        '''str 
+        '''str
         '''
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.__size)
