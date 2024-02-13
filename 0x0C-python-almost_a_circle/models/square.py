@@ -34,7 +34,8 @@ class Square(Rectangle):
         except IndexError:
             pass
         for key, value in kwargs.items():
-            setattr(self, key, value)
+            if hasattr(self, key) is True:
+                setattr(self, key, value)
 
     def to_dictionary(self):
         '''returns a dict
