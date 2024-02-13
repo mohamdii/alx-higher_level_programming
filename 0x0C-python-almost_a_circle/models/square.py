@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-""" square from rec """
+""" square from rec 
+"""
 from models.rectangle import Rectangle
+
 
 def Square(Rectangle):
     """square from rectangle"""
