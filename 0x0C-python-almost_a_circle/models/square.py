@@ -14,10 +14,14 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        '''getter for size
+        '''
         return self.__size
 
     @size.setter
     def size(self, value):
+        '''setter for size
+        '''
         self.validate_setter("width", value)
         self.__width = value
         self.validate_setter("height", value)
