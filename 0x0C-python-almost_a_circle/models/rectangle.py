@@ -51,9 +51,6 @@ class Rectangle(Base):
         self.validate_setter("y", value)
         self.__y = value
 
-    def area(self):
-        return self.width * self.height
-
     @staticmethod
     def validate_setter(name, val):
         if type(val) != int:
@@ -63,3 +60,11 @@ class Rectangle(Base):
                 raise ValueError("{} must be >= 0".format(name))
         elif val <= 0:
             raise ValueError("{} must be > 0".format(name))
+    
+    def area(self):
+        '''
+            Returns the area of rec
+        '''
+        return self.height * self.width
+
+
