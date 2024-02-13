@@ -50,6 +50,7 @@ class Rectangle(Base):
     def y(self, value):
         value = self.validate_setter("y", value)
         self.__y = value
+
     @staticmethod
     def validate_setter(name, val):
         if type(val) != int:
