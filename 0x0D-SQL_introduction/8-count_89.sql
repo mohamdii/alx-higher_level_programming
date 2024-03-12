@@ -1,2 +1,2 @@
 -- count
-SELECT COUNT(id) from first_table;
+SELECT COUNT(id) from first_table WHERE id=89;
