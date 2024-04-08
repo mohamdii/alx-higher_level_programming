@@ -9,5 +9,5 @@ if (isNaN(x))
 }
 else
 {
-    console.log('My number:' + x)
+    console.log('My number: ' + x)
 }
