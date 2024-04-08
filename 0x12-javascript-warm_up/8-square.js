@@ -7,7 +7,7 @@ row = '';
 x = parseInt(argv[2]);
 if (isNaN(x))
 {
-    console.log('Missing number of occurrences')
+    console.log('Missing size')
 }
 for (i = 0; i < x; i++)
 {
