@@ -4,7 +4,7 @@ function fact(num)
 {
     if (num === 0 || isNaN(num))
     {
-        return;
+        return 1;
     }
     return num * fact(num - 1)
 }
