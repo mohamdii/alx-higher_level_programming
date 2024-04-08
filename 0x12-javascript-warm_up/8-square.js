@@ -15,7 +15,7 @@ for (i = 0; i < x; i++)
     {
         row +='X'
     }
-    if (i !== x)
+    if (i !== x - 1)
     {
         row +='\n'
     }
