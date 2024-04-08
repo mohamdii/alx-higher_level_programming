@@ -9,15 +9,18 @@ if (isNaN(x))
 {
     console.log('Missing size')
 }
-for (i = 0; i < x; i++)
+else
 {
-    for (let j = 0; j < x; j++)
+    for (i = 0; i < x; i++)
     {
-        row +='X'
+        for (let j = 0; j < x; j++)
+        {
+            row +='X'
+        }
+        if (i !== x - 1)
+        {
+            row +='\n'
+        }
     }
-    if (i !== x - 1)
-    {
-        row +='\n'
-    }
+    console.log(row)
 }
-console.log(row)
