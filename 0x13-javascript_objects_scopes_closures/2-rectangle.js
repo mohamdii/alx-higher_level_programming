@@ -2,7 +2,7 @@
 
 class Rectangle {
     constructor(width, height){
-        if (width <= 0 || height <= 0)
+        if (width <= 0 || height <= 0 || !Number.isInteger(width) || !Number.isInteger(height))
         {
             this.width = undefined;
             this.height = undefined;
