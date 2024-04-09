@@ -8,11 +8,7 @@ class Square extends oldSquare {
         super(size)
         this.size = size;
     }
-    charPrint(c) {
-        if (c == undefined)
-        {
-            c = 'X'
-        }
+    charPrint(c = 'X') {
         let p = '';
         for(let i = 0; i < this.size; i++) {
             for (let j = 0; j < this.size; j++) {
