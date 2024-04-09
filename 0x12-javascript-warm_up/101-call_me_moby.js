@@ -1,5 +1,5 @@
 #!/usr/bin/node
-function callMeMoby(x, theFunction) {
+callMeMoby = (x, theFunction) => {
     let i = 0;
     while(i != x)
     {
