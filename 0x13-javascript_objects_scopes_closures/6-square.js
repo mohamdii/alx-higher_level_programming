@@ -10,21 +10,20 @@ class Square extends Rectangle {
     charPrint(c) {
         if (c == undefined)
         {
-            this.print();
+            c = 'X'
         }
-        else {
-                let p = '';
-                for(let i = 0; i < this.size; i++) {
-                    for (let j = 0; j < this.size; j++) {
-                        p += c;
-                    }
-                    if (i < this.size - 1)
-                    {
-                        p += '\n'
-                    }
-                }
-                console.log(p)
+        let p = '';
+        for(let i = 0; i < this.size; i++) {
+            for (let j = 0; j < this.size; j++) {
+                p += c;
             }
+            if (i < this.size - 1)
+            {
+                p += '\n'
+            }
+
+        }
+        console.log(p)    
     }
 }
 module.exports = Square;
