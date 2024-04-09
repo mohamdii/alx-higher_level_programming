@@ -8,7 +8,7 @@ class Square extends Rectangle {
         this.size = size;
     }
     charPrint(c) {
-        if (c == null)
+        if (c == undefined)
         {
             this.print();
         }
