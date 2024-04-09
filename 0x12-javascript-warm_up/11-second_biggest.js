@@ -28,5 +28,4 @@ if (argv.length <= 2)
         }
     }
     console.log(second)
-    console.log(argv.length)
 }
