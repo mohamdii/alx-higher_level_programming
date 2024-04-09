@@ -3,7 +3,7 @@
 const { Console } = require("console");
 
 const  argv  = require("process").argv;
-if (argv.length <= 2)
+if (argv.length <= 3)
 {
     console.log(0);
 } else {
