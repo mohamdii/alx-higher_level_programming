@@ -1,8 +1,11 @@
 #!/usr/bin/python3
 """the begining of the SQLALCHEMY"""
+
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Integer, Column, String
+
 Base = declarative_base()
+
 class State(Base):
     __tablename__ = 'states'
 
