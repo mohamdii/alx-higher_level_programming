@@ -6,7 +6,7 @@ import MySQLdb
 if __name__ == "__main__":
     dataB = MySQLdb.connect(host='localhost', db=sys.argv[3], user=sys.argv[1], passwd=sys.argv[2])
     cur = dataB.cursor()
-    cur.execute('SELECT * FROM cities ORDER BY cities.id')
+    cur.execute('SELECT * FROM cities ORDER BY cities.id ASC')
     rows = cur.fetchall()
     for row in rows:
         print(row)
