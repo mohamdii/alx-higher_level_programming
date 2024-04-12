@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+"""Its more specified and pay attention to quotes in exec"""
 import MySQLdb
 import sys
 if __name__ == "__main__":
