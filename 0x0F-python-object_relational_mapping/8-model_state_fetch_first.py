@@ -8,7 +8,11 @@ from model_state import Base, State
 if __name__ == "__main__":
     conD = 'mysql+mysqldb://{}:{}@localhost:3306/{}'
     engine = create_engine(conD.format(sys.argv[1], sys.argv[2], sys.argv[3]))
+    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
     instance = session.query(State).first()
-    print(instance.id, instance.name, sep=': ')
+    if instance is None:
+        print('Nothing')
+    else:
+        print(instance.id, instance.name, sep=': ')
